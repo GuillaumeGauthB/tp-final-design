@@ -5,15 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Métiers Québec - Tout sur l'éducation et le travail au Québec!</title>
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/principale.css">
+    <link rel="stylesheet" href="../v2/css/normalize.css">
+    <link rel="stylesheet" href="../v2/css/principale.css">
 </head>
 <body>
     <header>
-        <div id="logo-balise">
-            <div> <a href="principale.php"><img id=#logo src="images/logo.svg" alt="logo du site"></a> | Métiers Québec</div>
-        </div>
-        <nav id="menu-nav">
+        <div id="nav">
+            <div id="logo-balise"> <a href="principale.php"><img id=#logo src="images/logo.svg" alt="logo du site"></a> <span> | Métiers Québec</span></div>
             <div id="nav-education">
                 <a href="page-introuvable.html">Éducation</a>
                 <div class="burger liens-education">
@@ -36,6 +34,9 @@
                     <a href="page-introvable.html">Étudier ailleurs au Canada</a>
                     <a href="page-introvable.html">Étudier ailleurs dans le monde</a> -->
                 </div>
+        </div>
+        <nav id="menu-nav">
+            
             </div>
         </nav>
     </header>
