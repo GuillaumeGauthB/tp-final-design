@@ -11,8 +11,8 @@
     grid-template-columns:1fr 1fr 1fr;
     grid-template-rows:1fr;
     grid-template-areas: "car1 car2 car3";
-    grid-gap: 40px;
-    /* overflow-x:hidden; */
+    /* grid-gap: 40px; */
+    /* overflow-y:hidden; */
   }
   .boites:first-of-type{
     grid-area:car1;
@@ -63,8 +63,12 @@
   }
 
   .prochaine {
-      right:0;
+      /* right:0; */
       border-radius: 4px 0 0 4px;
+  }
+
+  #caroussel{
+    transition: transform 2s;
   }
 
   .derniere:hover, .prochaine:hover {

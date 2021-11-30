@@ -29,6 +29,7 @@ header{
 }
 body{
     height: 1000px;
+    overflow-x:hidden;
 }
 header div{
     padding:5px;

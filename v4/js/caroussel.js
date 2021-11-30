@@ -1,63 +1,35 @@
-// var slidePosition = 1;
-// SlideShow(slidePosition);
-
-// // forward/Back controls
-// function plusSlides(n) {
-//   SlideShow(slidePosition += n);
-// }
-
-// //  images controls
-// function currentSlide(n) {
-//   SlideShow(slidePosition = n);
-// }
-
-// function SlideShow(n) {
-//   var i;
-//   var slides = document.getElementsByClassName("boites");
-//   if (n > slides.length) {slidePosition = 1}
-//   if (n < 1) {slidePosition = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none";
-//   }
-//   slides[slidePosition-1].style.display = "grid";
-// }
-
-let posSlider = 0;
-// var slides = document.getElementsByClassName("caroussel");
+var posSlider = 0;
 var slides = document.getElementById("caroussel");
-SlideShow(posSlider, slides);
+setInterval(ChangerPos, 10000);
 
-// forward/Back controls
-function plusSlides(n) {
-  posSlider += n;
+function ChangerPos(){
+  console.log(posSlider);
+  posSlider += 1;
+  SlideShow(slides);
 }
 
-//  images controls
-// function currentSlide(n) {
-  
-// }
+function plusSlides(n) {
+  posSlider = n;
+  SlideShow(slides);
+}
 
-function SlideShow(pos, slide) {
-  var i;
-  if(pos = -1){
-    slide.style.transform = "translate(0, -100vw);";
+function SlideShow(slide) {
+  console.log(posSlider);
+  if (posSlider < 0){
+    posSlider = 2;
   }
-  else if(pos = 0){
-    slide.style.transform = "translate(0, 0);"
+  else if (posSlider > 2){
+    posSlider = 0;
   }
-  else if(pos = 1){
-    slide.style.transform = "translate(0, 100vw);"
+
+  if(posSlider == 0){
+    slide.style.transform = "translate(0vw)";
   }
-  else if (pos < -1){
-    pos = 1;
+  else if(posSlider == 1){
+    slide.style.transform = "translate(-99vw)";
   }
-  else{
-    pos = -1;
+  else if(posSlider == 2){
+    slide.style.transform = "translate(-198vw)";
   }
-  // if (n > slides.length) {slidePosition = 1}
-  // if (n < 1) {slidePosition = slides.length}
-  // for (i = 0; i < slides.length; i++) {
-  //     slides[i].style.display = "none";
-  // }
-  // slides[slidePosition-1].style.display = "grid";
+  console.log(posSlider);
 }
