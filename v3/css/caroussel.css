@@ -1,5 +1,8 @@
+:root{
+  --hcaroussel-large: 89.5vh;
+}
+
 .caroussel {
-    height:1200px;
     position: relative;
     /* margin: auto; */
     z-index: 1;
@@ -10,7 +13,7 @@
     grid-gap: 40px;
     overflow-x:hidden; */
   }
-  .boites:first-of-type{
+  /* .boites:first-of-type{
     grid-area:car1;
   }
   .boites:nth-of-type(2){
@@ -18,7 +21,7 @@
   }
   .boites:nth-of-type(3){
     grid-area:car3;
-  }
+  } */
   .boites{
     display:grid;
     grid-template-columns: 3fr 2fr;
@@ -30,16 +33,9 @@
   }
 
   .caroussel-img img{
-    height:90vh;
+    height:var(--hcaroussel-large);
     width:60vw;
     object-fit: cover;
-  }
-
-  .boites .caroussel-reste{
-    grid-area: txt;
-    background-color:rgb(70, 70, 70);
-    color: white;
-    /* width: 40vw; */
   }
   
   .boites{
@@ -49,17 +45,19 @@
   .derniere, .prochaine{
     cursor: pointer;
     position: absolute;
-    float: left;
+    /* float: left; */
+    width: 100vw;
     top: 48%;
     width: auto;
     margin-top: -23px;
     padding: 17px;
-    color: grey;
+    color: white;
     font-weight: bold;
     font-size: 19px;
     transition: 0.4s ease;
     border-radius: 0 5px 5px 0;
     user-select: none;
+    background-color: rgba(128, 128, 128, 0.342);
   }
 
   .prochaine {
@@ -86,4 +84,41 @@
   @keyframes fade {
     from {opacity: .5}
     to {opacity: 2}
+  }
+
+  /*================================================== Texte ==================*/
+  .boites .caroussel-reste{
+    grid-area: txt;
+    background-color:rgb(70, 70, 70);
+    color: white;
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: space-between;
+    height:var(--hcaroussel-large);
+  }
+  
+  .caroussel-titre{
+    text-align:center;
+    font-size: 3em;
+  }
+
+  .caroussel-texte{
+    text-align: justify;
+    font-size: 2em;
+    line-height: 5vh;
+    margin: 0 10%;
+  }
+
+  .caroussel-footer{
+    text-align: center;
+    margin: 1% 2%;
+  }
+
+  .caroussel-footer .caroussel-date{
+    text-align:right;
+  }
+
+  .caroussel-lien{
+    color:white;
+    font-size: 1.5rem;
   }
