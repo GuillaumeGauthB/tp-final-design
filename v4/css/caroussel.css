@@ -1,0 +1,89 @@
+.caroussel {
+    height:1200px;
+    position: relative;
+    /* margin: auto; */
+    z-index: 1;
+    /* display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr;
+    grid-template-areas: "car1 car2 car3";
+    grid-gap: 40px;
+    overflow-x:hidden; */
+  }
+  /* .boites:first-of-type{
+    grid-area:car1;
+  }
+  .boites:nth-of-type(2){
+    grid-area:car2;
+  }
+  .boites:nth-of-type(3){
+    grid-area:car3;
+  } */
+  .boites{
+    display:grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img txt";
+  }
+  .caroussel-img{
+    grid-area: img;
+  }
+
+  .caroussel-img img{
+    height:90vh;
+    width:60vw;
+    object-fit: cover;
+  }
+
+  .boites .caroussel-reste{
+    grid-area: txt;
+    background-color:rgb(70, 70, 70);
+    color: white;
+    /* width: 40vw; */
+  }
+  
+  .boites{
+      display: none;
+  }
+
+  .derniere, .prochaine{
+    cursor: pointer;
+    position: absolute;
+    /* float: left; */
+    top: 48%;
+    width: auto;
+    margin-top: -23px;
+    padding: 17px;
+    color: grey;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+  }
+
+  .prochaine {
+      right:0;
+      border-radius: 4px 0 0 4px;
+  }
+
+  .derniere:hover, .prochaine:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+  
+  @keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+  }

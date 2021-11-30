@@ -1,7 +1,6 @@
 /*==================================================================== CLASSES DIVERSES ==============*/
 :root{
-    --couleur-menu: rgb(191, 231, 255);
-    --coins-large: 30px;
+    --couleur-menu: rgb(191, 231, 255)
 }
 
 .souligner{
@@ -31,10 +30,10 @@ header div{
     border: solid black 3px;
     border-radius: 100px;
 }
-.header-div h1{
+.header-div span{
     font-size: 2em;
 }
-.header-div h1, .header-div nav{
+.header-div span, .header-div nav{
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -59,18 +58,4 @@ nav div{
 
 body{
     background-color: grey;
-}
-
-.contour-medium{
-    margin: 5%;
-    padding: 5%;
-    background-color:black;
-    border-radius: var(--coins-large);
-}
-
-.contour-petit{
-    background-color: var(--couleur-menu);
-    padding: 10%;
-    border-radius: var(--coins-large);
-    margin: 0 5%;
 }
