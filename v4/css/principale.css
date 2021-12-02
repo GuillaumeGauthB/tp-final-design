@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Mukta&display=swap');
+
 /*==================================================================== CLASSES DIVERSES ==============*/
 :root{
     --couleur-menu: #B2D1FF;
     --coins-large: 30px;
     --background-body: rgb(66, 66, 66); 
     --background-medium: grey; 
+    --ombre: 0px 4px 10px black;
+    /* --full-with: 100vw; */
 }
 
 .souligner{
@@ -19,17 +24,49 @@
     height:3px;
 }
 
+.ligne-droite{
+    height:100%;
+    width:5px;
+    background-color: black;
+}
+
+*{
+    font-family: 'Libre Franklin', sans-serif;
+}
 /*==================================================================== MENU DE NAVIGATION ============*/
 header{
     background-color: var(--couleur-menu);
     position:sticky;
-    box-shadow: 0px 4px 10px black;
+    box-shadow: var(--ombre);
     top: 0px;
     z-index: 5;
 }
 body{
-    height: 1000px;
     overflow-x:hidden;
+}
+.liens-burger-section{
+    display:flex;
+    flex-flow: row nowrap;
+    background-color:white;
+    width:100vw;
+    height:80px;
+    justify-content: space-around;
+    position:fixed;
+    top: 100px;
+    z-index:4;
+    box-shadow: var(--ombre);
+    transition: 1s;
+}
+.liens-burger-section:nth-of-type(even){
+    right: -101vw;
+}
+.liens-burger-section:nth-of-type(odd){
+    left: -101vw;
+}
+.liens-burger-section > a{
+    margin: auto 0;
+    justify-content: center;
+    width: auto;
 }
 header div{
     padding:5px;
@@ -41,7 +78,8 @@ header div{
     border-radius: 100px;
 }
 .header-div h1{
-    font-size: 2em;
+    font-size: 2rem;
+    font-family: 'PT Serif', serif;
 }
 .header-div h1, .header-div nav{
     margin-top: auto;
@@ -62,8 +100,25 @@ nav div{
 .burger:hover{
     cursor: pointer;
 }
-
-
+.menu-sections > a, .liens-burger-section > a{
+    font-size:1.3rem;
+    color:black;
+    transition: 1s;
+}
+.menu-sections > a:hover, .burger:hover{
+    color:blueviolet;
+    transform:scale(1.2);
+}
+.burger{
+    margin-left:5px;
+    transition: 1s;
+}
+.menu-sections > a, .liens-burger-section > a, .caroussel-titre, .titre-body, .contacts > a{
+    font-family: 'Mukta', sans-serif;
+}
+.contacts > a{
+    font-size: 2rem;
+}
 /*==================================================================== CORPS =================*/
 
 body{
@@ -75,7 +130,7 @@ body{
     padding: 5%;
     background-color:var(--background-medium);
     border-radius: var(--coins-large);
-    box-shadow: 0px 4px 10px black;
+    box-shadow: var(--ombre);
 }
 
 .contour-petit{
@@ -83,15 +138,15 @@ body{
     padding: 10%;
     border-radius: var(--coins-large);
     margin: 0 5%;
-    box-shadow: 0px 4px 10px black;
+    box-shadow: var(--ombre);
 }
 
 .nouvelles > h2, .contour-petit > h2, footer{
     text-align: center;
 }
 
-.nouvelles{
-    text-align: justify;
+.nouvelles > div > p > a{
+    color:orangered;
 }
 footer > a{
     color: white;

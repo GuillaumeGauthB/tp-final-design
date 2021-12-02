@@ -6,7 +6,6 @@
     position: relative;
     /* margin: auto; */
     z-index: 1;
-    box-shadow: 0px 4px 10px black;
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
     grid-template-rows:1fr;
@@ -29,6 +28,7 @@
     grid-template-rows: 1fr;
     grid-template-areas: "img txt";
     width:99vw;
+    box-shadow: var(--ombre);
   }
   .caroussel-img{
     grid-area: img;
@@ -105,12 +105,12 @@
   
   .caroussel-titre{
     text-align:center;
-    font-size: 3em;
+    font-size: 2rem;
   }
 
   .caroussel-texte{
     text-align: justify;
-    font-size: 2em;
+    font-size: 1.3rem;
     line-height: 5vh;
     margin: 0 10%;
   }

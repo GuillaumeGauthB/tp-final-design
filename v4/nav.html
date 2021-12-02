@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr-ca">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,18 +15,39 @@
         <a href="principale.html"><img src="images/logo.svg" alt="" class="logo"></a>
         <h1>| Métiers Québec</h1>
         <nav>
-            <div id="nav-education" class="menuSections">
-                <a href="">Éducation</a><span id="burger-educ" class="burger"> <img src="images/bars-solid.svg" alt=""></span>
+            <div id="nav-education" class="menu-sections">
+                <a href="">Éducation</a><span id="burger-educ" class="burger" onclick="bougerMenu(0)"> <img src="images/bars-solid.svg" alt=""></span>
             </div>
-            <div id="nav-travail" class="menuSections">
-                <a href="">Travail</a><span id="burger-travail" class="burger"><img src="images/bars-solid.svg" alt=""></span>
+            <div id="nav-travail" class="menu-sections">
+                <a href="">Travail</a><span id="burger-travail" class="burger"  onclick="bougerMenu(1)"><img src="images/bars-solid.svg" alt=""></span>
             </div>
-            <div id="nav-etranger" class="menuSections">
-                <a href="">Étranger</a><span id="burger-etranger" class="burger"><img src="images/bars-solid.svg" alt=""></span>
+            <div id="nav-etranger" class="menu-sections">
+                <a href="">Étranger</a><span id="burger-etranger" class="burger" onclick="bougerMenu(2)"><img src="images/bars-solid.svg" alt=""></span>
             </div>
         </nav>
         </div>
     </header>
+    <div id="liens-burger">
+        <div id="liens-burger-educ" class="liens-burger-section">
+            <a href="">Comprendre l'éducation au Québec</a>
+            <div class="ligne-droite"></div>
+            <a href="">Listes des écoles post-secondaires</a>
+        </div>
+        <div id="liens-burger-travail" class="liens-burger-section">
+            <a href="">Chercher un emploi</a>
+            <div class="ligne-droite"></div>
+            <a href="">Liste des métiers</a>
+            <div class="ligne-droite"></div>
+            <a href="">Choix de carrière</a>
+        </div>
+        <div id="liens-burger-etranger" class="liens-burger-section">
+            <a href="">Étudier au Québec</a>
+            <div class="ligne-droite"></div>
+            <a href="">Étudier ailleurs au Canada</a>
+            <div class="ligne-droite"></div>
+            <a href="">Étudier ailleurs dans le monde</a>
+        </div>
+    </div>
     <div class="caroussel" id="caroussel">
         <div class="boites">
             <div class="caroussel-img">
@@ -76,38 +97,38 @@
     </div>
     <div class="contour-medium">
         <div class="contour-petit">
-            <h2>Bienvenue sur Métiers Québec!</h3>
+            <h2 class="titre-body">Bienvenue sur Métiers Québec!</h2>
             <p>Sur ce site, vous découvrirez une panoplie de programmes d'études presents au Quebec ainsi que diverses informations sur ceux-ci, ainsi qu'une multitude de métiers et de professions, suivit d'informations sur ceux-ci. </p>
             <span class="division"></span>
             <p class="barre-noire"></p>
             <div class="nouvelles">
-                <h2>Nouvelles</h2>
+                <h2 class="titre-body">Nouvelles</h2>
                 <div>
-                    <h3>Septembre 2021</h3>
+                    <h3 class="titre-body">Septembre 2021</h3>
                     <p>- Connais-tu les nouveaux programmes à l'automne prochain ?, consulte la section <a href="">"quoi de neuf"</a></p>
                 </div>
                 <div>
-                    <h3>Février 2021</h3>
+                    <h3 class="titre-body">Février 2021</h3>
                     <p>- Ajout d'un nouveau métier : <a href="">technicien(ne) en pharmacie</a></p>
                 </div>
                 <div>
-                    <h3>Décembre 2020</h3>
+                    <h3 class="titre-body">Décembre 2020</h3>
                     <p>- Ajout de 3 nouvelles pages de métier : <a href="">opérateur(trice) de machinerie légère</a>, <a href="">préposé(e) au service automobile</a> et <a href="">mixologue ou barman(barmaid)</a></p>
                     <!-- <br> -->
                     <p>- Mise à jour des statistiques d'admission à l'automne 2020 pour les programmes d'études universitaires contingentés</p>
                 </div>
                 <div>
-                    <h3>Octobre 2020</h3>
+                    <h3 class="titre-body">Octobre 2020</h3>
                     <p>- Mise à jour complète des statistiques de placement les plus récentes disponibles pour l'ensemble des métiers de la formation professionnelle.</p>
                 </div>
                 <div>
-                    <h3>Septembre 2020</h3>
+                    <h3 class="titre-body">Septembre 2020</h3>
                     <p>- Mise à jour des statistiques d'admission à l'automne 2020 pour les programmes d'études collégiales contingentés</p>
                     <!-- <br> -->
                     <p>- Mise à jour complète des statistiques de placement les plus récentes disponibles pour l'ensemble des professions de niveau collégial</p>
                 </div>
                 <div>
-                    <h3>Janvier 2020</h3>
+                    <h3 class="titre-body">Janvier 2020</h3>
                     <p>- Ne manque les portes ouvertes de l'hiver dans les établissements de formation professionnelle, technique et universitaire. Tous les détails sur Facebook</p>
                 </div>
                 <p class="gras">- BONNE ANNÉE 2020 !</p>
@@ -120,5 +141,6 @@
         <a href="">Nous contacter</a>
     </footer>
     <script src="js/caroussel.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 </html>
