@@ -1,0 +1,10 @@
+
+/*==================================================================== CORPS =================*/
+
+.nouvelles > h2{
+    text-align: center;
+}
+
+.nouvelles > div > p > a{
+    color:orangered;
+}

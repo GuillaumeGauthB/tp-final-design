@@ -1,7 +1,9 @@
+/*==================================================================== CLASSES DIVERSES ==============*/
 :root{
   --hcaroussel-large: 89.5vh;
 }
 
+/*==================================================================== APPARENCE DU CAROROUSSEL ======*/
 .caroussel {
     position: relative;
     z-index: 1;
@@ -39,7 +41,6 @@
   .derniere, .prochaine{
     cursor: pointer;
     position: absolute;
-    /* float: left; */
     width: 100vw;
     top: 48%;
     width: auto;
@@ -55,7 +56,6 @@
   }
 
   .prochaine {
-      /* right:0; */
       border-radius: 4px 0 0 4px;
   }
 
@@ -84,7 +84,7 @@
     to {opacity: 2}
   }
 
-  /*================================================== Texte ==================*/
+  /*================================================== TEXTE DU CARROUSEL ==================*/
   .boites .caroussel-reste{
     grid-area: txt;
     background-color:rgb(70, 70, 70);
@@ -120,22 +120,23 @@
     font-size: 1.5rem;
   }
 
-  @media (max-width:576px){
-    .header-div h1{
-       display:none;
-    }
+/*==================================================================== MEDIAS QUERIES ======*/
 
+/*==================================================================== VERSION TÉLÉPHONE ======*/
+  @media (max-width:576px){
     .boites{
       grid-template-rows: 1fr 2fr;
-    }    
-  }
+    }  
+  }/* FIN DE LA VERSION TÉLÉPHONE */
 
+/*==================================================================== VERSION MIXTE TÉLÉPHONE ET TABLETTE ======*/
   @media (max-width: 992px){
     .boites{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1.2fr;
-    grid-template-areas: "img" "txt";
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1.2fr;
+      grid-template-areas: "img" "txt";
     }
+
     .caroussel-img img{
       width:100vw;
       height: 60vh;
@@ -143,17 +144,25 @@
     .boites .caroussel-reste{
       height: auto;
     }
-    .liens-burger-section > a{
-      text-align:center;
-    }
-  }
 
+    .prochaine{
+        margin-right: 0;
+        margin-left:auto;
+    }
+
+    .caroussel-date{
+      margin-right:5px;
+    }
+  }/* FIN DE LA VERSION MIXTE TÉLÉPHONE ET TABLETTE */
+
+/*==================================================================== VERSION GRAND ÉCRAN ======*/
   @media (min-width: 993px){
     .boites{
       grid-template-columns: 3fr 2fr;
       grid-template-rows: 1fr;
       grid-template-areas: "img txt";
     }
+
     .caroussel-img img{
       height:var(--hcaroussel-large);
       width:60vw;
@@ -162,4 +171,4 @@
     .boites .caroussel-reste{
       height:var(--hcaroussel-large);
     }
-  }
+  }/* FIN DE LA VERSION GRAND ÉCRAN */

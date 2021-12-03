@@ -1,0 +1,10 @@
+/*==================================================================== CORPS ======*/
+
+.contour-petit{
+    height:200px;
+}
+
+.contour-petit p{
+    text-align:center;
+    font-size: 1.5rem;
+}
