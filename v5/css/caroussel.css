@@ -153,6 +153,12 @@
     .caroussel-date{
       margin-right:5px;
     }
+
+    .prochaine{
+      position:relative;
+      right:0.5em;
+      top:21px;
+    }
   }/* FIN DE LA VERSION MIXTE TÉLÉPHONE ET TABLETTE */
 
 /*==================================================================== VERSION GRAND ÉCRAN ======*/

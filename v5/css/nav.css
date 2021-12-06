@@ -8,6 +8,9 @@
     --background-body: rgb(66, 66, 66); 
     --background-medium: grey; 
     --ombre: 0px 4px 10px black;
+    --famille-titre: 'PT Serif', serif;
+    --famille-base: 'Libre Franklin', sans-serif;
+    --famille-liens: 'Mukta', sans-serif;
     /* --full-with: 100vw; */
 }
 
@@ -31,7 +34,7 @@
 }
 
 *{
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: var(--famille-base);
 }
 /*==================================================================== MENU DE NAVIGATION ============*/
 header{
@@ -80,7 +83,7 @@ header div{
 }
 .header-div h1{
     font-size: 2rem;
-    font-family: 'PT Serif', serif;
+    font-family: var(--famille-titre);
 }
 .header-div h1, .header-div nav{
     margin-top: auto;
@@ -115,7 +118,7 @@ nav div{
     transition: 1s;
 }
 .menu-sections > a, .liens-burger-section > a, .caroussel-titre, .titre-body, .contacts > a{
-    font-family: 'Mukta', sans-serif;
+    font-family: var(--famille-liens);
 }
 .contacts > a{
     font-size: 2rem;
@@ -131,7 +134,7 @@ nav div{
     }
 
     .liens-burger-section a{
-        font-family: 1.2rem;
+        font-size: 1.2rem;
     }
 
     .menu-sections > a:hover, .burger:hover{

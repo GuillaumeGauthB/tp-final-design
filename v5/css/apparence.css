@@ -2,9 +2,10 @@ body{
     background-color: var(--background-body);
 }
 
-footer > a{
+.contacts > a{
     color: white;
     padding-bottom: 5%;
+    font-family: var(--famille-liens);
 }
 
 .contour-petit > h2, footer{
@@ -23,7 +24,7 @@ footer > a{
     }  
 
     .contacts a{
-        font-size:1.5rem;
+        font-size:1.2rem;
     }
   }/* FIN DE LA VERSION TÉLÉPHONE */
 
