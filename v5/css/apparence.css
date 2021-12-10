@@ -1,3 +1,5 @@
+/*==================================================================== APPARENCE DE LA PAGE ======*/
+
 body{
     background-color: var(--background-body);
 }
@@ -41,6 +43,7 @@ body{
   }/* FIN DE LA VERSION MIXTE TÉLÉPHONE ET TABLETTE */
 
   /*==================================================================== VERSION MIXTE TABLETTE ET GRAND ÉCRAN ======*/
+  
   @media (min-width:577px){
     .contour-petit{
         background-color: var(--couleur-menu);

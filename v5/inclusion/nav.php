@@ -27,13 +27,13 @@
         <h1>| Métiers Québec</h1>
         <nav>
             <div id="nav-education" class="menu-sections">
-                <a href="education.php">Éducation</a><span id="burger-educ" class="burger" onclick="bougerMenu(0)"> <img src="images/bars-solid.svg" alt=""></span>
+                <a href="education.php">Éducation</a><span id="burger-educ" class="burger" onclick="bougerMenu(0)"> <img src="images/menu-burger.svg" alt=""></span>
             </div>
             <div id="nav-travail" class="menu-sections">
-                <a href="page-introuvable.php">Travail</a><span id="burger-travail" class="burger"  onclick="bougerMenu(1)"><img src="images/bars-solid.svg" alt=""></span>
+                <a href="page-introuvable.php">Travail</a><span id="burger-travail" class="burger"  onclick="bougerMenu(1)"><img src="images/menu-burger.svg" alt=""></span>
             </div>
             <div id="nav-etranger" class="menu-sections">
-                <a href="page-introuvable.php">Étranger</a><span id="burger-etranger" class="burger" onclick="bougerMenu(2)"><img src="images/bars-solid.svg" alt=""></span>
+                <a href="page-introuvable.php">Étranger</a><span id="burger-etranger" class="burger" onclick="bougerMenu(2)"><img src="images/menu-burger.svg" alt=""></span>
             </div>
         </nav>
         </div>
