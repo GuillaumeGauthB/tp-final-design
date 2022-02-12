@@ -1,0 +1,66 @@
+/*==================================================================== APPARENCE DE LA PAGE ======*/
+
+body{
+    background-color: var(--background-body);
+}
+
+.contacts > a{
+    color: white;
+    padding-bottom: 5%;
+    font-family: var(--famille-liens);
+}
+
+.contour-petit > h2, footer{
+    text-align: center;
+}
+
+/*==================================================================== MEDIAS QUERIES ======*/
+
+/*==================================================================== VERSION TÉLÉPHONE ======*/
+@media (max-width:576px){
+    .contour-medium{
+        color:rgb(188, 223, 247);
+    }
+    .barre-noire{
+        background-color: rgb(188, 223, 247);
+    }  
+
+    .contacts a{
+        font-size:1.2rem;
+    }
+  }/* FIN DE LA VERSION TÉLÉPHONE */
+
+  /*==================================================================== VERSION MIXTE TÉLÉPHONE ET TABLETTE ======*/
+  @media (max-width: 992px){
+
+    .contour-medium{
+        margin-top: 5%;
+    }
+
+    .caroussel-date{
+        margin-right:5px;
+    }
+  }/* FIN DE LA VERSION MIXTE TÉLÉPHONE ET TABLETTE */
+
+  /*==================================================================== VERSION MIXTE TABLETTE ET GRAND ÉCRAN ======*/
+  
+  @media (min-width:577px){
+    .contour-petit{
+        background-color: var(--couleur-menu);
+        padding: 10%;
+        border-radius: var(--coins-large);
+        margin: 0 5%;
+        box-shadow: var(--ombre);
+    }
+  }/* FIN DE LA VERSION MIXTE TABLETTE ET GRAND ÉCRAN */
+
+/*==================================================================== VERSION GRAND ÉCRAN ======*/
+  @media (min-width: 993px){
+    .contour-medium{
+        margin: 5%;
+        padding: 5%;
+        background-color:var(--background-medium);
+        border-radius: var(--coins-large);
+        box-shadow: var(--ombre);
+    }
+  }/* FIN DE LA VERSION GRAND ÉCRAN */
